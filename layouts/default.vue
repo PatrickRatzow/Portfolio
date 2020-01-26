@@ -7,15 +7,15 @@
 </template>
 
 <script>
-	import Navbar from '~/components/Navbar.vue'
-	import Footer from '~/components/Footer.vue'
+  import Navbar from '~/components/Navbar.vue'
+  import Footer from '~/components/Footer.vue'
 
-	export default {
-		components: {
-			Navbar,
-			Footer
-		}
-	}
+  export default {
+    components: {
+      Navbar,
+      Footer
+    }
+  }
 </script>
 
 <style>
@@ -30,9 +30,9 @@
     box-sizing: border-box;
     background: linear-gradient(
       90deg,
-			rgb(24, 24, 24),
-			rgb(36, 36, 36)
-		);
+      rgb(24, 24, 24),
+      rgb(36, 36, 36)
+    );
 
     -ms-overflow-style: none;
   }
