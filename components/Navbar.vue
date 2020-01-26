@@ -1,6 +1,6 @@
 <template>
   <nav class="fadeIn mx-auto pb-12">
-      <nuxt-link :to="link.url" class="nav-link" v-for="link in links">{{ link.name }}</nuxt-link>
+      <nuxt-link :to="link.url" class="nav-link" v-for="link in links" v-bind:key="link.url">{{ link.name }}</nuxt-link>
       <a class="nav-link-gitlab" target="_blank" href="https://gitlab.com/sleeppyy/">GitLab</a>
   </nav>
 </template>

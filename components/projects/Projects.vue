@@ -3,6 +3,7 @@
     <Project
       v-for="(project, i) in processedProjects"
       v-bind:project="project"
+      v-bind:key="i"
       v-bind:id="i"
     />
   </div>
