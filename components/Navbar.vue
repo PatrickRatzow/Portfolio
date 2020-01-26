@@ -1,7 +1,7 @@
 <template>
   <nav class="fadeIn mx-auto pb-12">
       <nuxt-link :to="link.url" class="nav-link" v-for="link in links" v-bind:key="link.url">{{ link.name }}</nuxt-link>
-      <a class="nav-link-gitlab" target="_blank" href="https://gitlab.com/sleeppyy/">GitLab</a>
+      <a class="nav-link-gitlab" target="_blank" href="https://gitlab.com/sleeppyy/portfolio">source code</a>
   </nav>
 </template>
 
@@ -19,7 +19,7 @@
   .nav-link-gitlab {
     margin-left: 0px !important;
     color: #E24329;
-    @apply transition-all lowercase;
+    @apply transition-all lowercase whitespace-no-wrap;
   }
   .nav-link-gitlab:hover {
     @apply text-orange-400;
