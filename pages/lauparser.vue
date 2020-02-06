@@ -3,12 +3,12 @@
     <Category title="LAU parser" border-color="border-blue-400">
       <div class="flex">
         <div id="left" class="w-1/2 pr-4">
-          <h2 class="text-gray-300 text-base">Input</h2>
+          <h2 class="text-gray-300 text-base pb-2">Input</h2>
           <textarea id="codemirror-left" />
         </div>
 
         <div id="right" class="w-1/2">
-          <h2 class="text-gray-300 text-base">Output</h2>
+          <h2 class="text-gray-300 text-base pb-2">Output</h2>
           <textarea id="codemirror-right" />
         </div>
       </div>
