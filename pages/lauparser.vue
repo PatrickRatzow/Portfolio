@@ -1,7 +1,17 @@
 <template>
   <div>
-    <Category title="Lua Parser" border-color="border-blue-400">
-      <textarea id="codemirror" />
+    <Category title="LAU parser" border-color="border-blue-400">
+      <div class="flex">
+        <div id="left" class="w-1/2 pr-4">
+          <h2 class="text-gray-300 text-base">Input</h2>
+          <textarea id="codemirror-left" />
+        </div>
+
+        <div id="right" class="w-1/2">
+          <h2 class="text-gray-300 text-base">Output</h2>
+          <textarea id="codemirror-right" />
+        </div>
+      </div>
       <div class="flex flex-wrap justify-center mt-2">
         <button class="button border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white mr-2"
           v-on:click="postLuaCode">Submit</button>
@@ -25,26 +35,38 @@
     mounted() {
       if (process.client) {
         document.addEventListener("DOMContentLoaded", () => {
-          const textarea = document.getElementById("codemirror")
-          const editor = CodeMirror.fromTextArea(textarea, {
+          const editorTextarea = document.getElementById("codemirror-left")
+          const editor = CodeMirror.fromTextArea(editorTextarea, {
             value: "-- Your code",
             mode: "text/x-lua",
             lineNumbers: true,
             theme: "dracula"
           })
 
-          this.$set(this, "editor", editor)
+          const outputTextarea = document.getElementById("codemirror-right")
+          const outputEditor = CodeMirror.fromTextArea(outputTextarea, {
+            value: "-- Your code",
+            mode: "text/x-lua",
+            lineNumbers: true,
+            theme: "dracula",
+            readOnly: true
+          })
+
+          this.outputEditor = outputEditor
+          this.editor = editor
         })
       }
     },
     methods: {
       async postLuaCode() {
         const code = this.editor.getValue()
-
-        const resp = await this.$axios.$post("http://localhost:3201/luaparse", {
+        const resp = await this.$axios.$post("http://localhost:3200/luaparse", {
           code
         })
-        console.log(resp)
+
+        if (resp.parsedCode) {
+          this.outputEditor.setValue(resp.parsedCode)
+        }
       }
     },
     head: {
@@ -73,6 +95,7 @@
     background-color: #282a36 !important;
     color: #f8f8f2 !important;
     border: none;
+    font-size: 0.8rem;
   }
   .cm-s-dracula .CodeMirror-gutters { color: #282a36; }
   .cm-s-dracula .CodeMirror-cursor { border-left: solid thin #f8f8f0; }
