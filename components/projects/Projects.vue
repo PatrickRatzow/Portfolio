@@ -17,6 +17,7 @@
       name: "DarkRP F4 menu", 
       desc: "A polished & stylised F4 Menu for the DarkRP gamemode in Garry's Mod",
       img: "/f4menu.png",
+      alt: "F4 Menu GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-f4-the-darkrp-f4-menu",
       users: 125000,
       tags: [ "lua", "web", "mysql" ]
@@ -25,6 +26,7 @@
       name: "Inventory System", 
       desc: "A highly modular inventory system for Garry's Mod",
       img: "/inventory.png",
+      alt: "Inventory System GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-inventory",
       users: 50000,
       tags: [ "lua", "mysql" ]
@@ -33,6 +35,7 @@
       name: "Battle Pass", 
       desc: "A Battle Pass in Garry's Mod.<br/>Similar to Battle Passes from games like Fortnite",
       img: "/bp.png",
+      alt: "Battle Pass GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/6747",
       users: 25000,
       tags: [ "lua", "mysql" ]
@@ -44,6 +47,7 @@
       Heavily inspired by Player Unknown's Battlegrounds
       `,
       img: "/care_packages.png",
+      alt: "Care Packages GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-care-package-the-superior-airdrop-system",
       users: 23000,
       tags: [ "lua", "mysql" ]

@@ -2,7 +2,7 @@
   <div class="cursor-pointer project-background relative top-0 rounded my-4">
     <div class="flex flex-wrap" v-bind:class="{ 'flex-row-reverse': id % 2 == 0 }" @click="openURL(project.url)">
       <span class="sm:w-4/6 w-full">
-        <img class="rounded w-full h-full" :src="project.img"/>
+        <img class="rounded w-full h-full" :src="project.img" :alt="project.alt"/>
       </span>
       <div class="p-4 w-full sm:w-2/6">
         <h3 class="text-gray-200">{{ project.name }}</h3>
