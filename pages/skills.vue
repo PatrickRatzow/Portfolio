@@ -3,7 +3,7 @@
     <p>Skills I have used at a professional level, ordered by proficiency</p>
 
     <div class="flex flex-wrap justify-center mt-2">
-      <div v-bind:key="skill.name" v-for="(skill, i) in skills" class="skill w-3/6 sm:w-2/6 py-2 background">
+      <div v-bind:key="skill.name" v-for="(skill) in skills" class="skill w-3/6 sm:w-2/6 py-2 background">
         <div class="text-center skill-box pb-2 rounded relative hover:shadow-lg transition-all top-0">
           <div v-if="isImage(skill.icon)" class="pt-4 pb-2">
             <img :src="skill.icon" class="mx-auto">

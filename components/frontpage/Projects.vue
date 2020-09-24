@@ -1,7 +1,6 @@
 <template>
   <Category title="Selected Projects" border-color="border-green-600">
-    <p>Lua is by far my best language with over 7 years of experience.</p>
-    <p>It's what I find the most fun, and most of my projects are Lua.</p>
+    <p>Most of my easy to showcase public projects are in Lua, because that's simply the most fun for me.</p>
     <Projects shown-amount="2" />
   </Category>
 </template>

@@ -7,11 +7,11 @@
       <div class="p-4 w-full sm:w-2/6">
         <h3 class="text-gray-200">{{ project.name }}</h3>
         <p class="text-gray-500 text-xs" v-html="project.desc"></p>
-        <p class="text-gray-400 text-xs mb-1">
+        <p class="text-gray-400 text-xs mb-2">
           <br/>
-          Used by {{ formatNumber(project.users) }}+ people
+          Experienced by {{ formatNumber(project.users) }}+ people
         </p>
-        <span class="inline-block p-1 rounded-lg text-white text-xs mr-1" v-bind:class="getTag(tag).styling" v-for="tag in project.tags">
+        <span class="inline-block p-2 pt-1 pb-1 rounded text-white text-xs mr-1" v-bind:class="getTag(tag).styling" v-for="tag in project.tags">
           {{ getTag(tag).name }}
         </span>
       </div>

@@ -14,27 +14,27 @@
 
   const projects = [
     { 
-      name: "Inventory System", 
-      desc: "A highly modular inventory system for Garry's Mod",
-      img: "/inventory.jpg",
-      url: "https://www.gmodstore.com/market/view/xenin-inventory",
-      users: 20000,
-      tags: [ "lua", "mysql" ]
-    },
-    { 
       name: "DarkRP F4 menu", 
       desc: "A polished & stylised F4 Menu for the DarkRP gamemode in Garry's Mod",
       img: "/f4menu.png",
       url: "https://www.gmodstore.com/market/view/xenin-f4-the-darkrp-f4-menu",
-      users: 10000,
+      users: 125000,
       tags: [ "lua", "web", "mysql" ]
+    },
+    { 
+      name: "Inventory System", 
+      desc: "A highly modular inventory system for Garry's Mod",
+      img: "/inventory.png",
+      url: "https://www.gmodstore.com/market/view/xenin-inventory",
+      users: 50000,
+      tags: [ "lua", "mysql" ]
     },
     {     
       name: "Battle Pass", 
       desc: "A Battle Pass in Garry's Mod.<br/>Similar to Battle Passes from games like Fortnite",
       img: "/bp.png",
       url: "https://www.gmodstore.com/market/view/6747",
-      users: 8000,
+      users: 25000,
       tags: [ "lua", "mysql" ]
     },
     { 
@@ -43,9 +43,9 @@
       <br />
       Heavily inspired by Player Unknown's Battlegrounds
       `,
-      img: "/care_packages.jpg",
+      img: "/care_packages.png",
       url: "https://www.gmodstore.com/market/view/xenin-care-package-the-superior-airdrop-system",
-      users: 3000,
+      users: 23000,
       tags: [ "lua", "mysql" ]
     }
   ]
