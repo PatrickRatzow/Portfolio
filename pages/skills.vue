@@ -46,7 +46,15 @@
     },
     head() {
       return {
-        title: "Skills"
+        title: "Skills",
+        meta: [
+          { charset: "utf-8" },
+          { 
+            hid: "description",
+            name: "description",
+            content: "Some of my skills"
+          }
+        ]
       }
     }
   }

@@ -22,7 +22,15 @@
     },
     head() {
       return {
-        title: "sleeppyy"
+        title: "sleeppyy",
+        meta: [
+          { charset: "utf-8" },
+          { 
+            hid: "description",
+            name: "description",
+            content: "Patrick Ratzow's portfolio"
+          }
+        ]
       }
     }
   }

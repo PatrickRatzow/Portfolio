@@ -16,7 +16,15 @@
     },
     head() {
       return {
-        title: "Projects"
+        title: "Projects",
+        meta: [
+          { charset: "utf-8" },
+          { 
+            hid: "description",
+            name: "description",
+            content: "Noticeable projects I've made"
+          }
+        ]
       }
     }
   }
