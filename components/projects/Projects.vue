@@ -19,7 +19,7 @@
       img: "/f4menu.png",
       alt: "F4 Menu GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-f4-the-darkrp-f4-menu",
-      users: 125000,
+      users: 162000,
       tags: [ "lua", "web", "mysql" ]
     },
     { 
@@ -28,8 +28,18 @@
       img: "/inventory.png",
       alt: "Inventory System GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-inventory",
-      users: 50000,
-      tags: [ "lua", "mysql" ]
+      users: 58000,
+      tags: [ "lua", "mysql" ],
+      disabled: true
+    },
+    {
+      name: "Deathscreen",
+      desc: "A modern take on a deathscreen for Garry's Mod, with the ability for users to express themselves",
+      img: "/deathscreen.png",
+      alt: "Deathscreen GmodStore script banner",
+      url: "https://www.gmodstore.com/market/view/xenin-deathscreen-the-premier-deathscreen",
+      users: 32000,
+      tags: [ "lua", "mysql", "python" ]
     },
     {     
       name: "Battle Pass", 
@@ -37,7 +47,7 @@
       img: "/bp.png",
       alt: "Battle Pass GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/6747",
-      users: 25000,
+      users: 27000,
       tags: [ "lua", "mysql" ]
     },
     { 
@@ -49,7 +59,7 @@
       img: "/care_packages.png",
       alt: "Care Packages GmodStore script banner",
       url: "https://www.gmodstore.com/market/view/xenin-care-package-the-superior-airdrop-system",
-      users: 23000,
+      users: 25000,
       tags: [ "lua", "mysql" ]
     }
   ]
@@ -63,11 +73,12 @@
     },
     computed: {
       processedProjects() {
+        let activeProjects = projects.filter(project => project.disabled != true)
         if (this.shownAmount) {
-          return projects.slice(0, this.shownAmount)
+          activeProjects = activeProjects.slice(0, this.shownAmount)
         }
 
-        return projects
+        return activeProjects
       }
     },
     data() {

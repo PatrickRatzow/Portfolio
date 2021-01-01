@@ -49,11 +49,7 @@
         title: "Skills",
         meta: [
           { charset: "utf-8" },
-          { 
-            hid: "description",
-            name: "description",
-            content: "Some of my skills"
-          }
+          { hid: "og:description", name: "og:description", content: "A few of my skills" },
         ]
       }
     }

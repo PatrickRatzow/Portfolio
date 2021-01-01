@@ -12,6 +12,7 @@
   import About from '~/components/frontpage/About.vue'
   import Projects from '~/components/frontpage/Projects.vue'
   import Contact from '~/components/frontpage/Contact.vue'
+  import ogImage from '~/static/me.png';
 
   export default {
     components: {
@@ -25,11 +26,8 @@
         title: "sleeppyy",
         meta: [
           { charset: "utf-8" },
-          { 
-            hid: "description",
-            name: "description",
-            content: "Patrick Ratzow's portfolio"
-          }
+          { hid: "og:description", name: "og:description", content: "Patrick Ratzow's portfolio" },
+          { hid: "og:image", name: "og:image", content: "https://sleeppyy.com" + ogImage }
         ]
       }
     }

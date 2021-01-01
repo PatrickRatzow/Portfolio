@@ -23,7 +23,8 @@
   const tags = {
     lua: { name: "Lua", styling: "bg-blue-700" },
     mysql: { name: "MySQL", styling: "bg-purple-700" },
-    web: { name: "Web", styling: "bg-teal-700" }
+    web: { name: "Web", styling: "bg-teal-700" },
+    python: { name: "Python", styling: "bg-indigo-700" }
   }
 
   export default {

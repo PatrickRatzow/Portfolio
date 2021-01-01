@@ -19,11 +19,7 @@
         title: "Projects",
         meta: [
           { charset: "utf-8" },
-          { 
-            hid: "description",
-            name: "description",
-            content: "Noticeable projects I've made"
-          }
+          { hid: "og:description", name: "og:description", content: "Some of the projects I've made" },
         ]
       }
     }

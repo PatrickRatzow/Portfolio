@@ -1,6 +1,6 @@
 <template>
   <Category title="Selected Projects" border-color="border-green-600">
-    <p>Most of my easy to showcase public projects are in Lua, because that's simply the most fun for me.</p>
+    <p>A large majority of my public projects with a front-end worth showing off is in Lua. Therefore all the selected projects are Lua projects.</p>
     <Projects shown-amount="2" />
   </Category>
 </template>
