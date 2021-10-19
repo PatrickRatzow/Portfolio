@@ -56,7 +56,7 @@ export default Vue.extend({
         web: { name: "Web", styling: "bg-teal-700" },
         python: { name: "Python", styling: "bg-indigo-700" },
         cs: { name: "C#", styling: "bg-purple-700" },
-        vue: { name: "Vue", styling: "bg-green-500" }
+        vue: { name: "Vue", styling: "bg-green-600" }
       } as Tags
     }
   },
