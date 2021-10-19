@@ -5,23 +5,28 @@
   </Category>
 </template>
 
-<script>
-  import Category from "~/components/Category.vue"
-  import Projects from "~/components/projects/Projects.vue"
+<script lang="ts">
+import Vue from "vue"
+import Category from "~/components/Category.vue"
+import Projects from "~/components/projects/Projects.vue"
 
-  export default {
-    components: {
-      Category,
-      Projects
-    },
-    head() {
-      return {
-        title: "Projects",
-        meta: [
-          { charset: "utf-8" },
-          { hid: "og:description", name: "og:description", content: "Some of the projects I've made" },
-        ]
-      }
+export default Vue.extend({
+  components: {
+    Category,
+    Projects,
+  },
+  head() {
+    return {
+      title: "Projects",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Some of the projects I've made",
+        },
+      ],
     }
-  }
+  },
+})
 </script>

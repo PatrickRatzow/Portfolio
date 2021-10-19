@@ -1,18 +1,20 @@
 <template>
   <Category title="Selected Projects" border-color="border-green-600">
-    <p>A large majority of my public projects with a front-end worth showing off is in Lua. Therefore all the selected projects are Lua projects.</p>
-    <Projects shown-amount="2" />
+    <p>Some of my personal public projects.</p>
+    <p>None of my freelance projects are shown due to customer discretion</p>
+    <Projects :shown-amount="3" />
   </Category>
 </template>
 
-<script>
-  import Category from "~/components/Category.vue"
-  import Projects from "~/components/projects/Projects.vue"
+<script lang="ts">
+import Vue from "vue"
+import Category from "~/components/Category.vue"
+import Projects from "~/components/projects/Projects.vue"
 
-  export default {
-    components: {
-      Category,
-      Projects
-    }
-  }
+export default Vue.extend({
+  components: {
+    Category,
+    Projects,
+  },
+})
 </script>

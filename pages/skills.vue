@@ -1,14 +1,42 @@
 <template>
-  <Category title="My Skills" border-color="border-teal-600">
-    <p>Skills I have used at a professional level, ordered by proficiency</p>
+  <Category title="My Skills" border-color="border-purple-600">
+    <p>Skills I'm proficient or very proficient with.</p>
 
-    <div class="flex flex-wrap justify-center mt-2">
-      <div v-bind:key="skill.name" v-for="(skill) in skills" class="skill w-3/6 sm:w-2/6 py-2 background">
-        <div class="text-center skill-box pb-2 rounded relative hover:shadow-lg transition-all top-0">
+    <div
+      class="
+        grid grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        gap-4
+        auto-rows-fr
+        mt-2
+      "
+    >
+      <div
+        v-for="skill in skills"
+        :key="skill.name"
+        class="skill w-full background"
+      >
+        <div
+          class="
+            text-center
+            skill-box
+            pb-2
+            rounded
+            relative
+            hover:shadow-lg
+            transition-all
+            top-0
+          "
+        >
           <div v-if="isImage(skill.icon)" class="pt-4 pb-2">
-            <img :src="skill.icon" class="mx-auto">
+            <img :src="skill.icon" class="mx-auto" />
           </div>
-          <i v-else :class="[skill.icon, skill.styling]" class="fas fa-3x block pt-4 pb-2"/>
+          <i
+            v-else
+            :class="[skill.icon, skill.styling]"
+            class="fas fa-3x block pt-4 pb-1"
+          />
 
           <p class="text-gray-300">{{ skill.name }}</p>
         </div>
@@ -17,73 +45,58 @@
   </Category>
 </template>
 
-<script>
-  import Category from "~/components/Category.vue"
+<script lang="ts">
+import Vue from "vue"
+import Category from "~/components/Category.vue"
 
-  const skills = [
-    { name: "Lua", icon: "/skills/lua.svg" },
-    { name: "MySQL", icon: "fa-database", styling: "text-purple-700" },
-    { name: "JavaScript", icon: "/skills/javascript.png" },
-    { name: "HTML", icon: "/skills/html.png" },
-    { name: "CSS", icon: "/skills/css.png" },
-    { name: "Vue.js", icon: "/skills/vue.png" },
-    { name: "PHP", icon: "/skills/php.png" },
-    { name: "XSLT", icon: "fa-code", styling: "text-green-700" }
-  ]
-
-  export default {
-    methods: {
-      isImage: img => img.includes(".png") || img.includes(".jpg") || img.includes(".svg"),
-      getSkill: skill => skills[skill]
-    },
-    components: {
-      Category
-    },
-    data() {
-      return {
-        skills
-      }
-    },
-    head() {
-      return {
-        title: "Skills",
-        meta: [
-          { charset: "utf-8" },
-          { hid: "og:description", name: "og:description", content: "A few of my skills" },
-        ]
-      }
+export default Vue.extend({
+  components: {
+    Category,
+  },
+  data() {
+    return {
+      skills: [
+        { name: "C#", icon: "/skills/cs.png" },
+        { name: "TypeScript", icon: "/skills/ts.png" },
+        { name: "Lua", icon: "/skills/lua.svg" },
+        { name: "SQL", icon: "fa-database", styling: "text-purple-700" },
+        { name: "Vue.js", icon: "/skills/vue.png" },
+        { name: "Git", icon: "/skills/git.png" },
+        { name: "Docker", icon: "/skills/docker.png" },
+        { name: "HTML", icon: "/skills/html.png" },
+        { name: "CSS", icon: "/skills/css.png" },
+      ] as Skill[],
     }
-  }
+  },
+  head() {
+    return {
+      title: "Skills",
+      meta: [
+        { charset: "utf-8" },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "A few of my skills",
+        },
+      ],
+    }
+  },
+  methods: {
+    isImage: (img: string) =>
+      img.includes(".png") || img.includes(".jpg") || img.includes(".svg"),
+  },
+})
 </script>
 
 <style>
-  .skill {
-    @apply rounded pr-4;
-  }
-  .skill:nth-of-type(3n) {
-    @apply pr-0;
-  }
-  /* TODO Improve this */
-  @media(max-width: 639px) {
-    .skill:nth-of-type(2n) {
-      @apply pr-0;
-    }
-    .skill:nth-of-type(3n) {
-      @apply pr-0;
-    }
-    .skill:nth-of-type(3) {
-      @apply pr-4;
-    }
-  }
-
-  .skill-box {
-    background: rgb(44, 44, 44);
-  }
-  .skill-box:hover {
-    top: -4px;
-  }
-  .skill img {
-    width: 42px;
-    height: 48px;
-  }
+.skill-box {
+  background: rgb(44, 44, 44);
+}
+.skill-box:hover {
+  top: -4px;
+}
+.skill img {
+  width: 42px;
+  height: 48px;
+}
 </style>
