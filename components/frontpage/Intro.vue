@@ -7,6 +7,7 @@
       height="350"
       format="webp"
       alt="Image of me"
+      loading="lazy"
     />
     <h1 class="text-2xl text-blue-400 mt-2">I'm Patrick</h1>
     <h2 class="text-sm text-gray-400">Full-Stack Software Developer</h2>

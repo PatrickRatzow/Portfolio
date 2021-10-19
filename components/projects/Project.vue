@@ -14,6 +14,7 @@
           width="457"
           height="209"
           format="webp"
+          loading="lazy"
         />
       </span>
       <div class="p-4 w-full sm:w-2/6">

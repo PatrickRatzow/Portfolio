@@ -36,6 +36,7 @@
               width="42"
               height="48"
               format="webp"
+              loading="lazy"
             />
           </div>
           <i
