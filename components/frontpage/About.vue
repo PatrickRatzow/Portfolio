@@ -5,8 +5,8 @@
       things. I love the creative process of solving complex problems, and
       seeing the results of all the work.
       <br />
-      Especially proficient at understanding customers businesses, and
-      optimising their specific workflows.
+      Great at understanding how a customer's business works, and how to
+      optimise their workflows
     </p>
     <br />
     <p>

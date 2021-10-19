@@ -1,7 +1,10 @@
 <template>
-  <Category title="Selected Projects" border-color="border-green-600">
-    <p>Some of my personal public projects.</p>
-    <p>None of my freelance projects are shown due to customer discretion</p>
+  <Category title="Select Projects" border-color="border-green-600">
+    <p>
+      Select public projects of mine. None of my freelance projects are shown
+      here due to client discretion. If you want to see more of my projects,
+      send me an email
+    </p>
     <Projects :shown-amount="3" />
   </Category>
 </template>
