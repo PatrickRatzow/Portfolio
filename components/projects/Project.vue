@@ -7,10 +7,13 @@
       :class="{ 'flex-row-reverse': id % 2 == 0 }"
     >
       <span class="sm:w-4/6 w-full">
-        <img
+        <nuxt-img
           class="rounded w-full h-full"
           :src="project.img"
           :alt="project.alt"
+          width="457"
+          height="209"
+          format="webp"
         />
       </span>
       <div class="p-4 w-full sm:w-2/6">
@@ -42,7 +45,7 @@ import Vue, { PropOptions } from "vue"
 export default Vue.extend({
   props: {
     id: { type: Number, required: true } as PropOptions<number>,
-    project: { type: Object, required: true } as PropOptions<Project>,
+    project: { type: Object, required: true } as PropOptions<Project>
   },
   data() {
     return {
@@ -52,16 +55,16 @@ export default Vue.extend({
         web: { name: "Web", styling: "bg-teal-700" },
         python: { name: "Python", styling: "bg-indigo-700" },
         cs: { name: "C#", styling: "bg-purple-700" },
-        vue: { name: "Vue", styling: "bg-green-500" },
-      } as Tags,
+        vue: { name: "Vue", styling: "bg-green-500" }
+      } as Tags
     }
   },
   methods: {
     formatNumber: (number: number) => Number(number).toLocaleString(),
     projectTags(project: Project): Tag[] {
-      return project.tags.map((tag) => this.tags[tag])
-    },
-  },
+      return project.tags.map(tag => this.tags[tag])
+    }
+  }
 })
 </script>
 

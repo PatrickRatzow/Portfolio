@@ -5,20 +5,22 @@
       :key="link.url"
       :to="link.url"
       class="nav-link"
-      >{{ link.name }}</nuxt-link
     >
+      {{ link.name }}
+    </nuxt-link>
     <a
-      class="nav-link-gitlab"
+      class="nav-link-source"
       rel="noopener"
       target="_blank"
       href="https://github.com/patrickratzow/portfolio"
-      >source code</a
     >
+      source code
+    </a>
   </nav>
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from "vue"
+import Vue from "vue"
 
 export default Vue.extend({
   data() {
@@ -26,10 +28,10 @@ export default Vue.extend({
       links: [
         { name: "home", url: "/" },
         { name: "skills", url: "/skills" },
-        { name: "projects", url: "/projects" },
-      ],
+        { name: "projects", url: "/projects" }
+      ] as Link[]
     }
-  },
+  }
 })
 </script>
 
@@ -44,12 +46,12 @@ export default Vue.extend({
   @apply text-white;
 }
 
-.nav-link-gitlab {
+.nav-link-source {
   margin-left: 0px !important;
   color: #e24329;
   @apply ml-0 transition-all lowercase whitespace-nowrap;
 }
-.nav-link-gitlab:hover {
+.nav-link-source:hover {
   color: #f6ad55;
 }
 </style>

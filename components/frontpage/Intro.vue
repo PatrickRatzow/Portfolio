@@ -1,8 +1,11 @@
 <template>
   <div class="text-center m-auto h-auto pb-16">
-    <img
+    <nuxt-img
       class="rounded-full h-48 w-48 mx-auto shadow"
-      src="~/static/me.png"
+      src="/me.png"
+      width="350"
+      height="350"
+      format="webp"
       alt="Image of me"
     />
     <h1 class="text-2xl text-blue-400 mt-2">I'm Patrick</h1>

@@ -30,7 +30,13 @@
           "
         >
           <div v-if="isImage(skill.icon)" class="pt-4 pb-2">
-            <img :src="skill.icon" class="mx-auto" />
+            <nuxt-img
+              class="mx-auto"
+              :src="skill.icon"
+              width="42"
+              height="48"
+              format="webp"
+            />
           </div>
           <i
             v-else
@@ -51,7 +57,7 @@ import Category from "~/components/Category.vue"
 
 export default Vue.extend({
   components: {
-    Category,
+    Category
   },
   data() {
     return {
@@ -64,8 +70,8 @@ export default Vue.extend({
         { name: "Git", icon: "/skills/git.png" },
         { name: "Docker", icon: "/skills/docker.png" },
         { name: "HTML", icon: "/skills/html.png" },
-        { name: "CSS", icon: "/skills/css.png" },
-      ] as Skill[],
+        { name: "CSS", icon: "/skills/css.png" }
+      ] as Skill[]
     }
   },
   head() {
@@ -76,15 +82,15 @@ export default Vue.extend({
         {
           hid: "og:description",
           name: "og:description",
-          content: "A few of my skills",
-        },
-      ],
+          content: "A few of my skills"
+        }
+      ]
     }
   },
   methods: {
     isImage: (img: string) =>
-      img.includes(".png") || img.includes(".jpg") || img.includes(".svg"),
-  },
+      img.includes(".png") || img.includes(".jpg") || img.includes(".svg")
+  }
 })
 </script>
 
