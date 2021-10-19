@@ -1,8 +1,7 @@
 # Portfolio
+My portfolio made with Nuxt.js & TypeScript
 
-A portfolio I made for myself using NuxtJS, a Vue.js framework. It uses SSR (serverside rendering).
-
-You can see the portfolio live at [sleeppyy.com](https://sleeppyy.com)
+You can find a live version of this portfolio at [sleeppyy.com](https://sleeppyy.com)
 
 ## Build Setup
 
