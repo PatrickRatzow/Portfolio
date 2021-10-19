@@ -17,23 +17,26 @@
           loading="lazy"
         />
       </span>
-      <div class="p-4 w-full sm:w-2/6">
-        <h3 class="text-gray-200">{{ project.name }}</h3>
-        <p class="text-gray-400 text-xs" v-html="project.desc"></p>
-        <p class="text-gray-300 text-xs mb-2">
-          <br />
-          <template v-if="project.users">
-            Experienced by {{ formatNumber(project.users) }}+ people in-game
-          </template>
-          <template v-else>Beta testing begins Spring 2022</template>
-        </p>
-        <span
-          v-for="tag in projectTags(project)"
-          :key="tag.name"
-          class="inline-block p-2 pt-1 pb-1 rounded text-white text-xs mr-1"
-          :class="tag.styling"
-        >
-          {{ tag.name }}
+      <div class="flex flex-col justify-between p-4 w-full sm:w-2/6">
+        <span>
+          <h3 class="text-gray-200">{{ project.name }}</h3>
+          <p class="text-gray-400 text-xs" v-html="project.desc"></p>
+        </span>
+        <span>
+          <p class="text-gray-300 text-xs mb-2">
+            <br />
+            <template v-if="project.users">
+              Experienced by {{ formatNumber(project.users) }}+ people in-game
+            </template>
+          </p>
+          <span
+            v-for="tag in projectTags(project)"
+            :key="tag.name"
+            class="inline-block p-2 pt-1 pb-1 rounded text-white text-xs mr-1"
+            :class="tag.styling"
+          >
+            {{ tag.name }}
+          </span>
         </span>
       </div>
     </a>
